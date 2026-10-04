@@ -1,0 +1,8 @@
+R3 Safe build policy
+--------------------
+- Clean Gradle build.
+- Java/Kotlin compile + assembleDebug are blocking.
+- APK is copied and uploaded immediately after assembleDebug succeeds.
+- aapt / signature / native-library diagnostics are non-blocking.
+- No Robolectric test blocks artifact creation.
+- No Windows files are included in this Android-only package.
